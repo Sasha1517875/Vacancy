@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacancy.WebApi", "Vacancy.WebApi\Vacancy.WebApi.csproj", "{33268B42-480A-4402-A63F-02884C83412E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacancy.WebApi", "Vacancy.WebApi\Vacancy.WebApi.csproj", "{33268B42-480A-4402-A63F-02884C83412E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacancy.BL", "Vacancy.BL\Vacancy.BL.csproj", "{399C6168-E7EE-4446-ABB6-492826E49187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacancy.DataAccess", "Vacancy.DataAccess\Vacancy.DataAccess.csproj", "{482C3356-589B-436D-BA91-6706A74AE71D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{33268B42-480A-4402-A63F-02884C83412E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33268B42-480A-4402-A63F-02884C83412E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33268B42-480A-4402-A63F-02884C83412E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{399C6168-E7EE-4446-ABB6-492826E49187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399C6168-E7EE-4446-ABB6-492826E49187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399C6168-E7EE-4446-ABB6-492826E49187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399C6168-E7EE-4446-ABB6-492826E49187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{482C3356-589B-436D-BA91-6706A74AE71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482C3356-589B-436D-BA91-6706A74AE71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482C3356-589B-436D-BA91-6706A74AE71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482C3356-589B-436D-BA91-6706A74AE71D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
