@@ -3,7 +3,7 @@
 
 1. Основные сущности:
 
-![model](https://github.com/Sasha1517875/Vacancy/blob/master/model.jpg)
+![model](https://github.com/Sasha1517875/Vacancy/blob/master/model.jpeg)
 
 1.1 Пользователь:
 - Уникальный идентификатор
