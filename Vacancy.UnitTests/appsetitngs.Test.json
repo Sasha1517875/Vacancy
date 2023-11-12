@@ -1,0 +1,3 @@
+{
+  "VacancyDbContext": "Data Source=localhost;Initial Catalog=Vacancy;Integrated Security=SSPI;Trust Server Certificate=true;"
+}

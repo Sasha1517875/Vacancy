@@ -2,5 +2,6 @@
 {
     public class VacancySettings
     {
+        public string VacancyDbContextConnectionString { get; set; }
     }
 }

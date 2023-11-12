@@ -4,7 +4,10 @@
     {
         public static VacancySettings Read(IConfiguration configuration)
         {
-            return new VacancySettings();
+            return new VacancySettings()
+            {
+                VacancyDbContextConnectionString = configuration.GetValue<string>("VacancyDbContext")
+            };
         }
     }
 }
