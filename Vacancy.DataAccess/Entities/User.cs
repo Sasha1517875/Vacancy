@@ -10,5 +10,6 @@ namespace Vacancy.DataAccess.Entities
         public string SecretHash { get; set; }
         public int UserTypeId { get; set; }
         public UserType UserType { get; set; }
+        public virtual ICollection<Resume> Resumes { get; set;}
     }
 }

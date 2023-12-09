@@ -361,3 +361,18 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Vacancy.BL/Companies
+/Vacancy.BL/Mapper/VacancyStatusBLProfile.cs
+/Vacancy.BL/Mapper/VacancyBLProfile.cs
+/Vacancy.BL/Mapper/UserTypeBLProfile.cs
+/Vacancy.BL/Mapper/UserBLProfile.cs
+/Vacancy.BL/Mapper/CompanyBLProfile.cs
+/Vacancy.BL/User/UserProvider.cs
+/Vacancy.BL/User/UserManager.cs
+/Vacancy.BL/User/IUserProvider.cs
+/Vacancy.BL/User/IUserManager.cs
+/Vacancy.BL/User/Entities/UserModelFilter.cs
+/Vacancy.BL/User/Entities/UserModel.cs
+/Vacancy.BL/User/Entities/CreateUserModel.cs
+/Vacancy.BL/UserTypes
+/Vacancy.BL/VacancyStatsuses

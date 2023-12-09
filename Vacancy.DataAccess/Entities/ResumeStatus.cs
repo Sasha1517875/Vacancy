@@ -6,5 +6,6 @@ namespace Vacancy.DataAccess.Entities
     public class ResumeStatus : BaseEntity
     {
         public string Status { get; set; }
+        public virtual ICollection<Resume> Resumes { get; set; }
     }
 }

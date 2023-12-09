@@ -1,3 +1,4 @@
+using AutoMapper;
 using Vacancy.WebApi.IoC;
 using Vacancy.WebApi.Settings;
 
@@ -14,6 +15,8 @@ builder.Services.AddControllers();
 DbContextConfigurator.ConfigureService(builder.Services, settings);
 SerilogConfigurator.ConfigureService(builder);
 SwaggerConfigurator.ConfigureServices(builder.Services);
+MapperConfigurator.ConfigureServices(builder.Services);
+ServicesConfigurator.ConfigureService(builder.Services);
 
 var app = builder.Build();
 

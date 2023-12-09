@@ -3,7 +3,6 @@ using System.Linq.Expressions;
 using Vacancy.DataAccess;
 using Vacancy.DataAccess.Entities;
 
-
 namespace Vacancy.Repository
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity

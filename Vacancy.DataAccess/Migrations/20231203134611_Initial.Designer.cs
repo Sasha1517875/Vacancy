@@ -12,7 +12,7 @@ using Vacancy.DataAccess;
 namespace Vacancy.DataAccess.Migrations
 {
     [DbContext(typeof(VacancyDbContext))]
-    [Migration("20231112152145_Initial")]
+    [Migration("20231203134611_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -412,13 +412,13 @@ namespace Vacancy.DataAccess.Migrations
             modelBuilder.Entity("Vacancy.DataAccess.Entities.Resume", b =>
                 {
                     b.HasOne("Vacancy.DataAccess.Entities.ResumeStatus", "ResumeStatus")
-                        .WithMany()
+                        .WithMany("Resumes")
                         .HasForeignKey("ResumeStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Vacancy.DataAccess.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Resumes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -431,13 +431,13 @@ namespace Vacancy.DataAccess.Migrations
             modelBuilder.Entity("Vacancy.DataAccess.Entities.SkillInResume", b =>
                 {
                     b.HasOne("Vacancy.DataAccess.Entities.Resume", "Resume")
-                        .WithMany()
+                        .WithMany("SkillsInResume")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Vacancy.DataAccess.Entities.Skill", "Skill")
-                        .WithMany()
+                        .WithMany("SkillInResumes")
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -450,13 +450,13 @@ namespace Vacancy.DataAccess.Migrations
             modelBuilder.Entity("Vacancy.DataAccess.Entities.SkillInVacancy", b =>
                 {
                     b.HasOne("Vacancy.DataAccess.Entities.Skill", "Skill")
-                        .WithMany()
+                        .WithMany("SkillInVacancies")
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Vacancy.DataAccess.Entities.Vacancy", "Vacancy")
-                        .WithMany()
+                        .WithMany("SkillsInVacancy")
                         .HasForeignKey("VacancyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -469,7 +469,7 @@ namespace Vacancy.DataAccess.Migrations
             modelBuilder.Entity("Vacancy.DataAccess.Entities.User", b =>
                 {
                     b.HasOne("Vacancy.DataAccess.Entities.UserType", "UserType")
-                        .WithMany()
+                        .WithMany("Users")
                         .HasForeignKey("UserTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -480,13 +480,13 @@ namespace Vacancy.DataAccess.Migrations
             modelBuilder.Entity("Vacancy.DataAccess.Entities.Vacancy", b =>
                 {
                     b.HasOne("Vacancy.DataAccess.Entities.Company", "Company")
-                        .WithMany()
+                        .WithMany("Vacancies")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Vacancy.DataAccess.Entities.VacancyStatus", "VacancyStatus")
-                        .WithMany()
+                        .WithMany("Vacancies")
                         .HasForeignKey("VacancyStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -494,6 +494,48 @@ namespace Vacancy.DataAccess.Migrations
                     b.Navigation("Company");
 
                     b.Navigation("VacancyStatus");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.Company", b =>
+                {
+                    b.Navigation("Vacancies");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.Resume", b =>
+                {
+                    b.Navigation("SkillsInResume");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.ResumeStatus", b =>
+                {
+                    b.Navigation("Resumes");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.Skill", b =>
+                {
+                    b.Navigation("SkillInResumes");
+
+                    b.Navigation("SkillInVacancies");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.User", b =>
+                {
+                    b.Navigation("Resumes");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.UserType", b =>
+                {
+                    b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.Vacancy", b =>
+                {
+                    b.Navigation("SkillsInVacancy");
+                });
+
+            modelBuilder.Entity("Vacancy.DataAccess.Entities.VacancyStatus", b =>
+                {
+                    b.Navigation("Vacancies");
                 });
 #pragma warning restore 612, 618
         }

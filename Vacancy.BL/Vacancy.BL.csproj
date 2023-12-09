@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Vacancy.DataAccess\Vacancy.DataAccess.csproj" />
+    <ProjectReference Include="..\Vacancy.Repository\Vacancy.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Vacancy\" />
   </ItemGroup>
 
 </Project>

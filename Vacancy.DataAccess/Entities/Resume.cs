@@ -12,5 +12,6 @@ namespace Vacancy.DataAccess.Entities
         public int ResumeStatusId { get; set; }
         public ResumeStatus ResumeStatus { get; set; }
         public string Description { get; set; }
+        public virtual ICollection<SkillInResume> SkillsInResume { get; set; }
     }
 }

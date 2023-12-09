@@ -33,10 +33,10 @@ namespace Vacancy.DataAccess
             modelBuilder.Entity<Resume>().HasKey(x => x.Id);
             modelBuilder.Entity<Resume>().HasIndex(x => x.ExternalId).IsUnique();
             modelBuilder.Entity<Resume>().HasOne(x => x.ResumeStatus)
-                .WithMany()
+                .WithMany(x => x.Resumes)
                 .HasForeignKey(x => x.ResumeStatusId);
             modelBuilder.Entity<Resume>().HasOne(x => x.User)
-                .WithMany()
+                .WithMany(x => x.Resumes)
                 .HasForeignKey(x => x.UserId);
 
             modelBuilder.Entity<ResumeStatus>().HasKey(x => x.Id);
@@ -48,25 +48,25 @@ namespace Vacancy.DataAccess
             modelBuilder.Entity<SkillInResume>().HasKey(x => x.Id);
             modelBuilder.Entity<SkillInResume>().HasIndex(x => x.ExternalId).IsUnique();
             modelBuilder.Entity<SkillInResume>().HasOne(x => x.Skill)
-                .WithMany()
+                .WithMany(x => x.SkillInResumes)
                 .HasForeignKey(x => x.SkillId);
             modelBuilder.Entity<SkillInResume>().HasOne(x => x.Resume)
-                .WithMany()
+                .WithMany(x => x.SkillsInResume)
                 .HasForeignKey(x => x.ResumeId);
 
             modelBuilder.Entity<SkillInVacancy>().HasKey(x => x.Id);
             modelBuilder.Entity<SkillInVacancy>().HasIndex(x => x.ExternalId).IsUnique();
             modelBuilder.Entity<SkillInVacancy>().HasOne(x => x.Skill)
-                .WithMany()
+                .WithMany(x => x.SkillInVacancies)
                 .HasForeignKey(x => x.SkillId);
             modelBuilder.Entity<SkillInVacancy>().HasOne(x => x.Vacancy)
-                .WithMany()
+                .WithMany(x => x.SkillsInVacancy)
                 .HasForeignKey(x => x.VacancyId);
 
             modelBuilder.Entity<User>().HasKey(x => x.Id);
             modelBuilder.Entity<User>().HasIndex(x => x.ExternalId).IsUnique();
             modelBuilder.Entity<User>().HasOne(x => x.UserType)
-                .WithMany()
+                .WithMany(x => x.Users)
                 .HasForeignKey(x => x.UserTypeId);
 
             modelBuilder.Entity<UserType>().HasKey(x => x.Id);
@@ -75,10 +75,10 @@ namespace Vacancy.DataAccess
             modelBuilder.Entity<Entities.Vacancy>().HasKey(x => x.Id);
             modelBuilder.Entity<Entities.Vacancy>().HasIndex(x => x.ExternalId).IsUnique();
             modelBuilder.Entity<Entities.Vacancy>().HasOne(x => x.Company)
-                .WithMany()
+                .WithMany(x => x.Vacancies)
                 .HasForeignKey(x => x.CompanyId);
             modelBuilder.Entity<Entities.Vacancy>().HasOne(x => x.VacancyStatus)
-                .WithMany()
+                .WithMany(x => x.Vacancies)
                 .HasForeignKey(x => x.VacancyStatusId);
 
             modelBuilder.Entity<VacancyStatus>().HasKey(x => x.Id);

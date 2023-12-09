@@ -6,5 +6,6 @@ namespace Vacancy.DataAccess.Entities
     public class UserType : BaseEntity
     {
         public string Type { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

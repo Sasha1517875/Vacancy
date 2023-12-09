@@ -10,5 +10,6 @@ namespace Vacancy.DataAccess.Entities
         public int VacancyStatusId { get; set; }
         public VacancyStatus VacancyStatus { get; set; }
         public string Description { get; set; }
+        public virtual ICollection<SkillInVacancy> SkillsInVacancy { get; set; }
     }
 }

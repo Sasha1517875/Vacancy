@@ -2,7 +2,6 @@
 
 namespace Vacancy.DataAccess.Entities
 {
-
     public class BaseEntity
     {
         [Key]

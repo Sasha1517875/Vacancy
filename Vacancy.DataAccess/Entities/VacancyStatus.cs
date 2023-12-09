@@ -6,5 +6,6 @@ namespace Vacancy.DataAccess.Entities
     public class VacancyStatus : BaseEntity
     {
         public string Status { get; set; }
+        public virtual ICollection<Vacancy> Vacancies { get; set; }
     }
 }
