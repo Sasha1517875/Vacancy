@@ -8,8 +8,8 @@ namespace Vacancy.Service.UnitTests
 {
     public class VacancyApiEndpoints
     {
-        public const string AuthorizeUserEndpoint = "auth/login";
-        public const string RegisterUserEndpoint = "auth/register";
-        public const string GetAllResumesEndpoint = "resume";
+        public const string AuthorizeUserEndpoint = "Auth/login";
+        public const string RegisterUserEndpoint = "Auth/register";
+        public const string GetAllResumesEndpoint = "Resume";
     }
 }

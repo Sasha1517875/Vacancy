@@ -19,9 +19,12 @@ namespace Vacancy.Service.UnitTests.Users.Authorization
             //prepare
             var user = new UserEntity()
             {
+                ExternalId = Guid.NewGuid(),
                 Email = "test@test",
                 Name = "test@test",
-                UserTypeId = TestTypeId
+                UserTypeId = TestTypeId,
+                UserName = "test@test",
+                SecretHash = "test",
             };
             var password = "Password1@";
 

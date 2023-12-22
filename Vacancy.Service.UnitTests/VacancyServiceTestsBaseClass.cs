@@ -51,15 +51,15 @@ namespace Vacancy.Service.UnitTests
             var status = statusRepository.Save(new ResumeStatus() { Status = "Test status" });
             var type = userTypeRepository.Save(new UserType() { Type = "test type" });
 
-            var user = userRepository.Save(new User() { Email = "test", SecretHash = "test hash", Name = "testttt", UserType = type });
+            var user = userRepository.Save(new User() { Email = "test", SecretHash = "test hash", Name = "testttt", UserTypeId = type.Id });
 
             var resume = resumeRepository.Save(new Resume()
             {
                 Education = "Test education",
                 Description = "Test description",
                 Experience = "Test experience",
-                ResumeStatus = status,
-                User = user
+                ResumeStatusId = status.Id,
+                UserId = user.Id
             });
             TestResumeId = resume.Id;
             TestTypeId = type.Id;
