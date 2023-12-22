@@ -62,6 +62,7 @@ namespace Vacancy.Service.UnitTests
                 User = user
             });
             TestResumeId = resume.Id;
+            TestTypeId = type.Id;
         }
 
         public T? GetService<T>()
@@ -71,6 +72,7 @@ namespace Vacancy.Service.UnitTests
 
         private readonly WebApplicationFactory<Program> _testServer;
         protected int TestResumeId;
+        protected int TestTypeId;
         protected HttpClient TestHttpClient => _testServer.CreateClient();
     }
 }

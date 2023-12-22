@@ -21,6 +21,7 @@ namespace Vacancy.Service.UnitTests.Users.Authorization
             {
                 Email = "test@test",
                 Name = "test@test",
+                UserTypeId = TestTypeId
             };
             var password = "Password1@";
 
