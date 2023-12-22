@@ -5,7 +5,7 @@ using Vacancy.DataAccess.Entities;
 
 namespace Vacancy.Repository
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IRepository<T> where T : class, IBaseEntity
     {
         public Repository(IDbContextFactory<VacancyDbContext> contextFactory)
         {

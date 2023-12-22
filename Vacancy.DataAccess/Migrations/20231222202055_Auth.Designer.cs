@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vacancy.DataAccess;
 
@@ -11,9 +12,11 @@ using Vacancy.DataAccess;
 namespace Vacancy.DataAccess.Migrations
 {
     [DbContext(typeof(VacancyDbContext))]
-    partial class VacancyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231222202055_Auth")]
+    partial class Auth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

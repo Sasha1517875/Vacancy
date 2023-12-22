@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Duende.IdentityServer" Version="6.3.7" />
+    <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.3.7" />
+    <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.3.7" />
+    <PackageReference Include="Duende.IdentityServer.EntityFramework.Storage" Version="6.3.7" />
+    <PackageReference Include="Duende.IdentityServer.Storage" Version="6.3.7" />
   </ItemGroup>
 
   <ItemGroup>

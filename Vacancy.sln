@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacancy.UnitTests", "Vacanc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacancy.Repository", "Vacancy.Repository\Vacancy.Repository.csproj", "{09BE837A-A293-4E8B-B486-4E4B1515A6AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacancy.BL.UnitTests", "Vacancy.BL.UnitTests\Vacancy.BL.UnitTests.csproj", "{4B4050E4-ABC6-4429-8FEF-06183737B6BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vacancy.BL.UnitTests", "Vacancy.BL.UnitTests\Vacancy.BL.UnitTests.csproj", "{4B4050E4-ABC6-4429-8FEF-06183737B6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vacancy.Service.UnitTests", "Vacancy.Service.UnitTests\Vacancy.Service.UnitTests.csproj", "{D33CCB9B-14A7-4307-8EA2-2D1977FF0BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4B4050E4-ABC6-4429-8FEF-06183737B6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B4050E4-ABC6-4429-8FEF-06183737B6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B4050E4-ABC6-4429-8FEF-06183737B6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33CCB9B-14A7-4307-8EA2-2D1977FF0BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33CCB9B-14A7-4307-8EA2-2D1977FF0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33CCB9B-14A7-4307-8EA2-2D1977FF0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33CCB9B-14A7-4307-8EA2-2D1977FF0BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
